@@ -1,7 +1,7 @@
 
 import numpy as np
 
-def low_cepstrum(data, index=50):
+def low_cepstrum(data, fs, index=50):
     """
     Perform cepstrum with low pass lifter. The algorithm is as follows.
         Time series data -> DFT -> abs -> log -> iDFT -> lifter -> DFT
@@ -23,7 +23,7 @@ def low_cepstrum(data, index=50):
     return dft_cps_low, fscale
 
 
-def high_cepstrum(data, index=50):
+def high_cepstrum(data, fs, index=50):
     """
     Perform cepstrum with high pass lifter. The algorithm is as follows.
         Time series data -> DFT -> abs -> log -> iDFT -> lifter -> DFT
@@ -61,8 +61,8 @@ if __name__ == "__main__":
     dft = np.fft.fft(window_data, n)
     dft_abs = np.abs(dft)
     LogAmpDFT = 10*np.log10(dft_abs**2)
-    dft_ceps_low, fscale = low_cepstrum(window_data, index=50)
-    dft_ceps_high, fscale = high_cepstrum(window_data, index=50)
+    dft_ceps_low, fscale = low_cepstrum(window_data, fs, index=50)
+    dft_ceps_high, fscale = high_cepstrum(window_data, fs, index=50)
 
     plt.subplot(121)
     plt.plot(fscale[:int(fs/2)], LogAmpDFT[:int(fs/2)], color="blue")
