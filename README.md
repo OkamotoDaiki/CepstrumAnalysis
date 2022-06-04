@@ -9,7 +9,7 @@ The following logarithmic amplitude spectrum can be obtained by using the sample
 *The red graph is the spectrum envelope by cepstrum analysis.
 *The orange graph is a fine variation component by cepstrum analysis.
 
-![Graph](https://github.com/OkamotoDaiki/CepstrumAnalysis/issues/1#issue-1260662158)
+![cepstrum](https://user-images.githubusercontent.com/49944765/171987716-2370761f-95c4-4172-afc4-ec6f651d79f8.png)
 
 # Features
  
