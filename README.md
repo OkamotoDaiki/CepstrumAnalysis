@@ -28,10 +28,12 @@ The spectrum envelope can be obtained with low_cepstrum(), and the fine fluctuat
 You can import it with the following program.
 
 ```python
-import CepstrumAnalyis
+import CepstrumAnalysis
 import soundfile
-data = soundfile.read(fname)
-dft_cps_low = CepstrumAnalysis.low_cepstrum(data, index=50)
+
+fname = "0_jackson_0.wav" #Any wav file.
+data, fs = soundfile.read(fname)
+dft_cps_low, fscale = CepstrumAnalysis.low_cepstrum(data, fs, index=50)
 ```
  
 # Usage
