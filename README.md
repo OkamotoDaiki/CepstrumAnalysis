@@ -1,6 +1,8 @@
 # Cepstrum Analysis
 
 This program that uses the lifter of cepstrum analysis to separate spectral envelopes and small fluctuation components.
+
+Commentary article[JP]: https://qiita.com/Oka_D/items/cc296b358be340138f2c
  
 # DEMO
  
